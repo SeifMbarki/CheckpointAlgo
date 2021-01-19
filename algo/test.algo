@@ -1,0 +1,31 @@
+ALGORITHM algorithm_name
+VAR
+    phrase: STRING[];
+    nb_char,nb_wrd,nbvow,i:INTEGER
+BEGIN
+ write("enter your sentence");
+    read(phrase);
+    i:=0;
+    nb_char:=0;
+    WHILE (phrase[i]<>".") DO
+        nb_char:=nb_char+1;
+        i:=i+1;
+    END_WHILE
+ nb_wrd:=0;
+ i:=0;
+ WHILE (i<phrase.length) DO
+     IF (phrase[i]) THEN
+         nb_wrd:=nb_wrd+1;
+     END_IF
+     i:=i+1;
+ END_WHILE
+ nbvow:=0;
+FOR i FROM 0 TO length(phrase) STEP 1  DO
+    IF ((phrase[i].toUpperCase)) in [A,E,O,U,I]) THEN
+        nbvow:=nbvow+1
+    END_IF
+END_FOR
+ write( nb_char);
+ write(nb_wrd);
+ write(nbvow);
+END
